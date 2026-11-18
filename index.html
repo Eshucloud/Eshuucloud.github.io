@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Emergency Brother Department 🚨</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #17112b, #35145c, #14213d);
+        color: white;
+        text-align: center;
+        min-height: 100vh;
+        padding: 30px 15px;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 42px;
+        margin-top: 20px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        opacity: 0.85;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.10);
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 25px;
+        padding: 25px;
+        margin: 20px 0;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    button {
+        border: none;
+        border-radius: 50px;
+        padding: 14px 24px;
+        margin: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+        background: white;
+        color: #35145c;
+    }
+
+    button:hover {
+        transform: scale(1.08);
+    }
+
+    #dialogue {
+        font-size: 22px;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .meter {
+        width: 100%;
+        height: 25px;
+        background: rgba(255,255,255,0.15);
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 20px 0;
+    }
+
+    #bar {
+        height: 100%;
+        width: 15%;
+        background: #ffffff;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+    .secret {
+        display: none;
+        font-size: 20px;
+        line-height: 1.7;
+        margin-top: 15px;
+    }
+
+    .award {
+        font-size: 21px;
+        line-height: 1.8;
+    }
+
+    footer {
+        margin-top: 35px;
+        opacity: 0.6;
+        font-size: 14px;
+    }
+
+    .heart {
+        position: fixed;
+        font-size: 25px;
+        animation: float 3s linear forwards;
+        pointer-events: none;
+    }
+
+    @keyframes float {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(-500px);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🚨 BROTHER EMERGENCY DEPARTMENT 🚨</h1>
+
+    <p class="subtitle">
+        Official website for one specific idiot who is currently having a bad day.
+    </p>
+
+    <div class="card">
+
+        <h2>🧠 Current Status</h2>
+
+        <p style="margin-top:15px;">
+            Brother's mood:
+        </p>
+
+        <div class="meter">
+            <div id="bar"></div>
+        </div>
+
+        <p id="status">
+            SYSTEM ALERT: Mood critically low 😭
+        </p>
+
+        <button onclick="repairMood()">
+            🛠️ REPAIR MOOD
+        </button>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🎭 Random Brother Dialogue Generator</h2>
+
+        <div id="dialogue">
+            Click the button. You have been warned.
+        </div>
+
+        <button onclick="randomDialogue()">
+            🎲 Generate Nonsense
+        </button>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🏆 Official Brother Awards</h2>
+
+        <div class="award">
+            🥇 Best Brother Award — 100/10<br>
+            🥇 Professional Overthinker — Certified<br>
+            🥇 World's Most Dramatic Sigh — Legendary<br>
+            🥇 Survived Eshu's Nonsense — Impossible Difficulty<br>
+            🥇 Still Standing After Family Drama — RESPECT 🫡
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🎬 IMPORTANT CINEMA</h2>
+
+        <p style="margin:20px 0;">
+            Imagine entering a room dramatically...
+        </p>
+
+        <button onclick="cinema()">
+            🎥 PLAY SCENE
+        </button>
+
+        <div id="scene" style="margin-top:20px;font-size:20px;"></div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>⚠️ Extremely Serious Warning</h2>
+
+        <p style="margin:20px 0;line-height:1.7;">
+            You are legally required to drink some water,
+            eat something if you haven't,
+            take a deep breath,
+            and remember that one horrible day does NOT get to decide
+            what your whole life looks like.
+        </p>
+
+        <button onclick="showSecret()">
+            🔐 Open Classified Message
+        </button>
+
+        <div id="secret" class="secret">
+            Hey idiot. ❤️<br><br>
+
+            I know things are difficult right now.
+            You don't have to pretend you're okay with me.
+            You don't have to solve everything tonight either.<br><br>
+
+            I'm here. That's it. No conditions.
+            We can sit quietly, talk nonsense, fight over stupid things,
+            eat something, watch something, or just exist.<br><br>
+
+            And yes, unfortunately for you,
+            you're stuck with me. 😭<br><br>
+
+            <b>Now smile a little. I worked very hard on this stupid website.</b> 😂❤️
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🚨 FINAL EMERGENCY BUTTON</h2>
+
+        <p style="margin:15px;">
+            Press only if you require immediate nonsense.
+        </p>
+
+        <button onclick="emergency()">
+            🚨 DO NOT PRESS
+        </button>
+
+        <p id="emergencyText" style="margin-top:20px;font-size:22px;"></p>
+
+    </div>
+
+
+    <footer>
+        Made with questionable coding skills and excessive sibling affection ❤️
+        <br>
+        © Department of Annoying Your Brother
+    </footer>
+
+</div>
+
+
+<script>
+
+const dialogues = [
+
+    "Brother: I am suffering. 😔",
+    "Eshu: Have you tried being less dramatic?",
+    "Brother: No.",
+    "Eshu: Understandable. Continue.",
+
+    "BREAKING NEWS 🚨: Brother has been diagnosed with lack of snacks.",
+
+    "Doctor: What's wrong?",
+    "Brother: Everything.",
+    "Doctor: Understandable. Next patient.",
+
+    "Your current subscription to life has been renewed automatically. 💀",
+
+    "Congratulations! You survived another day. The government is impressed. 🫡",
+
+    "Warning: Excessive thinking detected. Please uninstall thoughts.",
+
+    "Brother.exe has stopped responding.",
+    "Solution: Give him food.",
+
+    "Eshu has entered the chat.",
+    "Bad mood has left the chat. 🚪",
+
+    "Official diagnosis: You need one extremely stupid conversation immediately.",
+
+    "Plot twist: This is just a bad chapter, not the entire story. ❤️"
+];
+
+
+function randomDialogue() {
+
+    let random = Math.floor(Math.random() * dialogues.length);
+
+    document.getElementById("dialogue").innerHTML =
+        dialogues[random];
+
+}
+
+
+function repairMood() {
+
+    let bar = document.getElementById("bar");
+    let status = document.getElementById("status");
+
+    bar.style.width = "82%";
+
+    status.innerHTML =
+        "MOOD REPAIR: 82% COMPLETE 🛠️😂";
+
+    createHearts();
+
+    setTimeout(() => {
+
+        bar.style.width = "100%";
+
+        status.innerHTML =
+            "SYSTEM RESTORED. Brother.exe is functioning again. 🫡❤️";
+
+    }, 1500);
+}
+
+
+function cinema() {
+
+    document.getElementById("scene").innerHTML =
+        "🎬 <b>SCENE 1:</b><br><br>" +
+        "Brother sits dramatically staring into the distance...<br><br>" +
+        "Eshu walks in.<br><br>" +
+        "\"Bro.\"<br><br>" +
+        "Brother: \"What?\"<br><br>" +
+        "Eshu: \"Nothing. I just came to disturb you.\"<br><br>" +
+        "Brother: \"...\"<br><br>" +
+        "Eshu: \"Mission accomplished.\" 💀😂";
+
+}
+
+
+function showSecret() {
+
+    document.getElementById("secret").style.display = "block";
+
+    createHearts();
+
+}
+
+
+function emergency() {
+
+    document.getElementById("emergencyText").innerHTML =
+        "🚨🚨🚨 TOO LATE 🚨🚨🚨<br><br>" +
+        "You have been attacked by 47 invisible chickens. 🐔💀<br><br>" +
+        "There is no escape.";
+
+    createHearts();
+
+}
+
+
+function createHearts() {
+
+    for(let i = 0; i < 15; i++) {
+
+        let heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerHTML =
+            Math.random() > 0.5 ? "❤️" : "😂";
+
+        heart.style.left =
+            Math.random() * 100 + "vw";
+
+        heart.style.bottom = "0px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 3000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
